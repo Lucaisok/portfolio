@@ -7,7 +7,7 @@
         "Hi, my name is Luca. I write codes and play synthesizers... This is my Portfolio, feel free to have a look around !";
     let speed = 80;
 
-    const modal = document.getElementById("modal");
+    const modalContainer = document.getElementById("modalContainer");
 
     const typer = () => {
         if (i < text.length) {
@@ -68,9 +68,29 @@
                     github: "https://github.com/Lucaisok/finalproject",
                 },
             },
+            {
+                img: "./collect.png",
+                name: "klsnef",
+                description:
+                    "mssk sskn the final project of my Bootcamp at Spiced Academy, Collect is a fully functional web app for Restaurants, Bars and Clubs owners that keep tracks of the customers data and automatically delete it after 14 days. The purpose of this app is to help flattening the Covid curve making easier for bars and restaurants to keep track of their customers and, at the same time, improving the privacy protection of the users.",
+                tech: {
+                    front: "Reacdddt",
+                    back: "Node.jdsdss + Express",
+                    database: "Possddtgres",
+                },
+                link: {
+                    website: "https://collect-webapp.herokuapp.com/",
+                    github: "https://github.com/Lucaisok/finalproject",
+                },
+            },
         ];
 
-        for (let i = 0; i < projects.length; i++) {
+        for (var i = 0; i < projects.length; i++) {
+            console.log(projects[i]);
+
+            let modal = document.createElement("div");
+            modal.setAttribute("class", "modal");
+
             modal.innerHTML = `
             <img src="${projects[i].img}" alt="" />
             <div id="description">
@@ -78,9 +98,9 @@
                 <p>${projects[i].description}</p>
                 <div id="techStack">
                     <h6>Tech Stack</h6>
-                    <p><strong>FRONT END : ${projects[i].tech.front}</p>
-                    <p><strong>BACK END : ${projects[i].tech.back}/p>
-                    <p><strong>DATABASE : ${projects[i].tech.database}</p>
+                    <p><strong>FRONT END :</strong> ${projects[i].tech.front}</p>
+                    <p><strong>BACK END : </strong> ${projects[i].tech.back}</p>
+                    <p><strong>DATABASE : </strong> ${projects[i].tech.database}</p>
                 </div>
                 <div id="lunch">
                     <a
@@ -96,8 +116,8 @@
                         /></a>
                 </div>
             </div>
-            
             `;
+            modalContainer.appendChild(modal);
         }
     };
 

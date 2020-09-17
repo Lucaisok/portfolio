@@ -150,17 +150,24 @@ svg {
     cursor: pointer;
 }
 
-#modal {
-    background-color: white;
-    width: 97%;
-    height: 95%;
-    position: absolute;
-    top: 205%;
-    left: 1.5%;
-    right: auto;
+#modalContainer {
+    display: -webkit-inline-box;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
 }
 
-#modal img {
+.modal {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* top: 205%; */
+    /* left: auto;
+    right: auto; */
+}
+
+.modal img {
     width: 50%;
     height: 95%;
     position: absolute;
@@ -233,6 +240,7 @@ svg {
     bottom: 80%;
     margin-bottom: 10px;
     margin-top: 10px;
+    color: #678691;
 }
 
 #techStack strong {
