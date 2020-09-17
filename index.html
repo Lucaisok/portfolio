@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+            rel="stylesheet"
+        />
+        <title>Personal Portfolio</title>
+    </head>
+    <body>
+        <section id="first">
+            <header class="navBar">
+                <p id="about">About</p>
+                <p id="projects">Projects</p>
+                <p id="contact">Contact</p>
+            </header>
+            <div id="presentation"></div>
+        </section>
+        <section id="second">
+            <p>
+                I am a Full Stack Web Developer based in
+                <span class="redWord">Berlin</span>, with a focus on
+                <span class="redWord">Front End</span> and a passion for simple
+                yet effective, reusable <span class="redWord">codes</span>.
+                <span><br /></span>Despite my classical studies, I joined the
+                devs world as a self taught first, then I boosted my learning
+                curve with the
+                <span class="redWord">Spiced Academy</span> bootcamp.<span
+                    ><br
+                /></span>
+                I love to
+                <span class="redWord">design</span> +
+                <span class="redWord">develop</span> outstanding web apps with
+                <span class="redWord">React</span> +
+                <span class="redWord">Redux</span> and
+                <span class="redWord">Node.js</span> +
+                <span class="redWord">Express</span>, as well as learning new
+                technologies! More ?
+                <span class="redWord resume">Resume</span> !
+            </p>
+
+            <svg height="750" width="750">
+                <polygon
+                    points="140,70 700,200 720,700 0,700"
+                    style="fill: #f4ecdf"
+                />
+            </svg>
+            <div class="redCircle">
+                <img class="avatar" src="./man.svg" alt="Avatar" />
+            </div>
+        </section>
+        <section id="third">
+            <div class="projectsContainer" id="projectsContainer">
+                <div class="collect">
+                    <img
+                        id="projectsImg"
+                        class="projectsImg"
+                        src="./collect2.png"
+                        alt="Collect project"
+                    />
+                    <p id="projectsP" class="projectsP">Collect</p>
+                </div>
+                <div class="social">
+                    <img
+                        id="projectsImg2"
+                        class="projectsImg"
+                        src="./social2.png"
+                        alt="SocialNetwork project"
+                    />
+                    <p id="projectsP2" class="projectsP">Social IPA</p>
+                </div>
+                <div class="synth">
+                    <img
+                        id="projectsImg3"
+                        class="projectsImg"
+                        src="./synthboard.png"
+                        alt="SynthBoard project"
+                    />
+                    <p id="projectsP3" class="projectsP">SynthBoard</p>
+                </div>
+            </div>
+            <div id="modal">
+                <p id="closeModal">X</p>
+                <img src="./collect.png" alt="" />
+                <div id="description">
+                    <h4>Collect</h4>
+                    <p>
+                        Developed as the final project of my Bootcamp at Spiced
+                        Academy, Collect is a fully functional web app for
+                        Restaurants, Bars and Clubs owners that keep tracks of
+                        the customers data and automatically delete it after 14
+                        days. The purpose of this app is to help flattening the
+                        Covid curve making easier for bars and restaurants to
+                        keep track of their customers and, at the same time,
+                        improving the privacy protection of the users.
+                    </p>
+                    <div id="techStack">
+                        <h6>Tech Stack</h6>
+                        <p><strong>FRONT END : </strong>React</p>
+                        <p><strong>BACK END : </strong>Node.js + Express</p>
+                        <p><strong>DATABASE : </strong>Postgres</p>
+                    </div>
+                    <div id="lunch">
+                        <a
+                            href="https://collect-webapp.herokuapp.com/"
+                            target="_blank"
+                            ><img src="./visit.svg" alt="visit website"
+                        /></a>
+                        <a
+                            id="seeCode"
+                            href="https://github.com/Lucaisok/finalproject"
+                            target="_blank"
+                            ><img src="./github.svg" alt="see code"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fourth">
+            <h4>Don`t Be Shy, Say Hi</h4>
+            <div id="icons">
+                <a href="https://github.com/Lucaisok" target="_blank"
+                    ><img src="./github-image.svg" alt="github icon"
+                /></a>
+                <a
+                    href="https://www.linkedin.com/in/luca-tomarelli-038024132"
+                    target="_blank"
+                    ><img src="./linkedin.svg" alt="linkedin icon"
+                /></a>
+                <img src="./instagram-sketched.svg" alt="instagram icon" />
+            </div>
+            <p>lucatomarelli1@gmail.com</p>
+            <footer>&copy; Luca Tomarelli, 2020</footer>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
