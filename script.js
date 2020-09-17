@@ -1,140 +1,105 @@
-console.log("js connected");
+(function () {
+    console.log("js connected");
 
-let i = 0;
-let textDiv = document.getElementById("presentation");
-let text =
-    "Hi, my name is Luca. I write codes and play synthesizers... This is my Portfolio, feel free to have a look around !";
-let speed = 80;
+    let i = 0;
+    let textDiv = document.getElementById("presentation");
+    let text =
+        "Hi, my name is Luca. I write codes and play synthesizers... This is my Portfolio, feel free to have a look around !";
+    let speed = 80;
 
-let projectsContainer = document.getElementById("projectsContainer");
-let projectsImg = document.getElementById("projectsImg");
-let projectsP = document.getElementById("projectsP");
-let projectsImg2 = document.getElementById("projectsImg2");
-let projectsP2 = document.getElementById("projectsP2");
-let projectsImg3 = document.getElementById("projectsImg3");
-let projectsP3 = document.getElementById("projectsP3");
+    const modal = document.getElementById("modal");
 
-const modal = document.getElementById("modal");
-const closeModal = document.getElementById("closeModal");
+    const typer = () => {
+        if (i < text.length) {
+            textDiv.innerHTML += text.charAt(i);
+            textDiv.style.color = "#f4ecdf";
+            textDiv.style.fontFamily = "Alata";
+            textDiv.style.fontSize = "71" + "px";
+            textDiv.style.fontWeight = "bold";
+            textDiv.style.cursor = "pointer";
+            i++;
+            setTimeout(typer, speed);
+        }
+    };
 
-const typer = () => {
-    if (i < text.length) {
-        textDiv.innerHTML += text.charAt(i);
-        textDiv.style.color = "#f4ecdf";
-        textDiv.style.fontFamily = "Alata";
-        textDiv.style.fontSize = "71" + "px";
-        textDiv.style.fontWeight = "bold";
-        textDiv.style.cursor = "pointer";
-        i++;
-        setTimeout(typer, speed);
-    }
-};
+    typer();
 
-typer();
+    $("#about").click(function () {
+        $("html,body").animate(
+            {
+                scrollTop: $("#second").offset().top,
+            },
+            "slow"
+        );
+    });
 
-$("#about").click(function () {
-    $("html,body").animate(
-        {
-            scrollTop: $("#second").offset().top,
-        },
-        "slow"
-    );
-});
+    $("#projects").click(function () {
+        $("html,body").animate(
+            {
+                scrollTop: $("#third").offset().top,
+            },
+            "slow"
+        );
+    });
 
-$("#projects").click(function () {
-    $("html,body").animate(
-        {
-            scrollTop: $("#third").offset().top,
-        },
-        "slow"
-    );
-});
+    $("#contact").click(function () {
+        $("html,body").animate(
+            {
+                scrollTop: $("#fourth").offset().top,
+            },
+            "slow"
+        );
+    });
 
-$("#contact").click(function () {
-    $("html,body").animate(
-        {
-            scrollTop: $("#fourth").offset().top,
-        },
-        "slow"
-    );
-});
+    const renderProject = () => {
+        const projects = [
+            {
+                img: "./collect.png",
+                name: "Collect",
+                description:
+                    "Developed as the final project of my Bootcamp at Spiced Academy, Collect is a fully functional web app for Restaurants, Bars and Clubs owners that keep tracks of the customers data and automatically delete it after 14 days. The purpose of this app is to help flattening the Covid curve making easier for bars and restaurants to keep track of their customers and, at the same time, improving the privacy protection of the users.",
+                tech: {
+                    front: "React",
+                    back: "Node.js + Express",
+                    database: "Postgres",
+                },
+                link: {
+                    website: "https://collect-webapp.herokuapp.com/",
+                    github: "https://github.com/Lucaisok/finalproject",
+                },
+            },
+        ];
 
-projectsImg.addEventListener("mouseover", () => {
-    projectsImg.classList.add("mouseOverImg");
-    projectsP.classList.remove("projectsP");
-    projectsP.classList.add("mouseOverP");
-});
+        for (let i = 0; i < projects.length; i++) {
+            modal.innerHTML = `
+            <img src="${projects[i].img}" alt="" />
+            <div id="description">
+                <h4>${projects[i].name}</h4>
+                <p>${projects[i].description}</p>
+                <div id="techStack">
+                    <h6>Tech Stack</h6>
+                    <p><strong>FRONT END : ${projects[i].tech.front}</p>
+                    <p><strong>BACK END : ${projects[i].tech.back}/p>
+                    <p><strong>DATABASE : ${projects[i].tech.database}</p>
+                </div>
+                <div id="lunch">
+                    <a
+                            href=${projects[i].link.website}
+                            target="_blank"
+                            ><img src="./visit.svg" alt="visit website"
+                        /></a>
+                        <a
+                            id="seeCode"
+                            href=${projects[i].link.github}
+                            target="_blank"
+                            ><img src="./github.svg" alt="see code"
+                        /></a>
+                </div>
+            </div>
+            
+            `;
+        }
+    };
 
-projectsImg.addEventListener("mouseleave", () => {
-    projectsImg.classList.remove("mouseOverImg");
-    projectsP.classList.remove("mouseOverP");
-    projectsP.classList.add("projectsP");
-});
-
-projectsP.addEventListener("mouseover", () => {
-    projectsImg.classList.add("mouseOverImg");
-    projectsP.classList.remove("projectsP");
-    projectsP.classList.add("mouseOverP");
-});
-
-projectsP.addEventListener("mouseleave", () => {
-    projectsImg.classList.remove("mouseOverImg");
-    projectsP.classList.remove("mouseOverP");
-    projectsP.classList.add("projectsP");
-});
-
-//2
-
-projectsImg2.addEventListener("mouseover", () => {
-    projectsImg2.classList.add("mouseOverImg");
-    projectsP2.classList.remove("projectsP");
-    projectsP2.classList.add("mouseOverP");
-});
-
-projectsImg2.addEventListener("mouseleave", () => {
-    projectsImg2.classList.remove("mouseOverImg");
-    projectsP2.classList.remove("mouseOverP");
-    projectsP2.classList.add("projectsP");
-});
-
-projectsP2.addEventListener("mouseover", () => {
-    projectsImg2.classList.add("mouseOverImg");
-    projectsP2.classList.remove("projectsP");
-    projectsP2.classList.add("mouseOverP");
-});
-
-projectsP2.addEventListener("mouseleave", () => {
-    projectsImg2.classList.remove("mouseOverImg");
-    projectsP2.classList.remove("mouseOverP");
-    projectsP2.classList.add("projectsP");
-});
-
-//3
-
-projectsImg3.addEventListener("mouseover", () => {
-    projectsImg3.classList.add("mouseOverImg");
-    projectsP3.classList.remove("projectsP");
-    projectsP3.classList.add("mouseOverP");
-});
-
-projectsImg3.addEventListener("mouseleave", () => {
-    projectsImg3.classList.remove("mouseOverImg");
-    projectsP3.classList.remove("mouseOverP");
-    projectsP3.classList.add("projectsP");
-});
-
-projectsP3.addEventListener("mouseover", () => {
-    projectsImg3.classList.add("mouseOverImg");
-    projectsP3.classList.remove("projectsP");
-    projectsP3.classList.add("mouseOverP");
-});
-
-projectsP3.addEventListener("mouseleave", () => {
-    projectsImg3.classList.remove("mouseOverImg");
-    projectsP3.classList.remove("mouseOverP");
-    projectsP3.classList.add("projectsP");
-});
-
-closeModal.addEventListener("click", () => {
-    modal.classList.add("closedModal");
-});
+    renderProject();
+})();
