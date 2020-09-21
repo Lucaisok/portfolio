@@ -8,6 +8,8 @@
     let speed = 80;
 
     const modalContainer = document.getElementById("modalContainer");
+    const leftArrow = document.getElementById("leftArrow");
+    const rightArrow = document.getElementById("rightArrow");
 
     const typer = () => {
         if (i < text.length) {
@@ -69,18 +71,48 @@
                 },
             },
             {
-                img: "./collect.png",
-                name: "klsnef",
+                img: "./social2.png",
+                name: "Social IPA",
                 description:
-                    "mssk sskn the final project of my Bootcamp at Spiced Academy, Collect is a fully functional web app for Restaurants, Bars and Clubs owners that keep tracks of the customers data and automatically delete it after 14 days. The purpose of this app is to help flattening the Covid curve making easier for bars and restaurants to keep track of their customers and, at the same time, improving the privacy protection of the users.",
+                    "Third full stack project made during my Bootcamp at Spiced Academy. Basic Social Network with the most common functionalities. Made wit React + Redux, Node.js (Express) and Postgres.",
                 tech: {
-                    front: "Reacdddt",
-                    back: "Node.jdsdss + Express",
-                    database: "Possddtgres",
+                    front: "React + Redux",
+                    back: "Node.js + Express",
+                    database: "Postgres",
                 },
                 link: {
-                    website: "https://collect-webapp.herokuapp.com/",
-                    github: "https://github.com/Lucaisok/finalproject",
+                    website: "",
+                    github: "https://github.com/Lucaisok/Social-Network",
+                },
+            },
+            {
+                img: "./synthboard.png",
+                name: "SynthBoard",
+                description:
+                    "Second full stack project ever! Part of my education at Spiced Academy. Made with Vue.js, Aws, Node.js",
+                tech: {
+                    front: "Vue.js",
+                    back: "Node.js + Express",
+                    database: "Postgres",
+                },
+                link: {
+                    website: "",
+                    github: "https://github.com/Lucaisok/Synthboard",
+                },
+            },
+            {
+                img: "./autonoma.png",
+                name: "Autonoma",
+                description:
+                    "Minimalistic style mailing list subscriber for Autonoma Industriale, a Berlin based record label and party series focused on private concerts and underground events. Made with React, Express and Postgres. Features an admin panel to retrieve data from the database",
+                tech: {
+                    front: "React",
+                    back: "Node.js + Express",
+                    database: "Postgres",
+                },
+                link: {
+                    website: "http://www.autonomaindustriale.com/",
+                    github: "https://github.com/Lucaisok/autonomaMailingList",
                 },
             },
         ];
@@ -118,8 +150,28 @@
             </div>
             `;
             modalContainer.appendChild(modal);
+
+            leftArrow.addEventListener("click", () => {
+                // body its wrong. its always current position + or  - 100%
+                modal.animate(
+                    [
+                        { transform: "translateX(-100%)" },
+                        { transform: "translateX(0px)" },
+                    ],
+                    { duration: 1000, fill: "forwards" }
+                );
+            });
+
+            rightArrow.addEventListener("click", () => {
+                modal.animate(
+                    [
+                        { transform: "translateX(0px" },
+                        { transform: "translateX(-100%)" },
+                    ],
+                    { duration: 1000, fill: "forwards" }
+                );
+            });
         }
     };
-
     renderProject();
 })();
