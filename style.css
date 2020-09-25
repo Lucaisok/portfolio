@@ -154,8 +154,9 @@ svg {
     display: -webkit-inline-box;
     width: 100%;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     background-color: #678691;
+    animation-fill-mode: forwards;
 }
 
 #arrowsContainer {
@@ -169,12 +170,14 @@ svg {
 }
 
 #arrowsContainer p {
-    z-index: 100;
+    z-index: 9000;
     padding-left: 25px;
     padding-right: 25px;
     color: #678691;
     cursor: pointer;
     transform-origin: 50% 50%;
+    position: relative;
+    animation-fill-mode: forwards;
 }
 
 @keyframes leftarrow {
@@ -200,28 +203,30 @@ svg {
 
 .left {
     animation: leftarrow 0.9s infinite alternate ease-in-out;
+    display: none;
 }
 .right {
     animation: rightarrow 0.9s infinite alternate ease-in-out;
+    left: 92%;
 }
 
-#arrowsContainer p:hover {
+/* #arrowsContainer p:hover {
     color: #1f4554;
     animation-play-state: paused;
-}
+} */
 
 .modal {
     background-color: white;
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     position: relative;
-    border-left: 2px solid #1f4554;
-    border-right: 2px solid #1f4554;
-    border-top: 2px solid #1f4554;
-    border-bottom: 2px solid #1f4554;
-    margin-top: 6px;
-    margin-right: 5px;
-    margin-left: 5px;
+    /* border-left: 2px solid #1f4554;
+    border-right: 2px solid #1f4554; */
+    /* border-top: 2px solid #1f4554; */
+    /* border-bottom: 2px solid #1f4554; */
+    /* margin-top: 6px; */
+    /* margin-right: 5px; */
+    /* margin-left: 5px; */
     /* top: 205%; */
     /* left: auto;
     right: auto; */

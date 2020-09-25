@@ -4,12 +4,15 @@
     let i = 0;
     let textDiv = document.getElementById("presentation");
     let text =
-        "Hi, my name is Luca. I write codes and play synthesizers... This is my Portfolio, feel free to have a look around !";
+        "Hi, my name is Luca. I write codes and play synthesizers... This is what I do, feel free to have a look around !";
     let speed = 80;
 
     const modalContainer = document.getElementById("modalContainer");
+
     const leftArrow = document.getElementById("leftArrow");
     const rightArrow = document.getElementById("rightArrow");
+    let modalArray = [];
+    let counter = 0;
 
     const typer = () => {
         if (i < text.length) {
@@ -74,9 +77,9 @@
                 img: "./social2.png",
                 name: "Social IPA",
                 description:
-                    "Third full stack project made during my Bootcamp at Spiced Academy. Basic Social Network with the most common functionalities. Made wit React + Redux, Node.js (Express) and Postgres.",
+                    "Social Network for IPA beer passionates. Features the most common social functionalities: login and logout / ask, accept, decline and delete friendship / send and receive private messages / upload pics and update bio. Made wit React + Redux, Node.js (Express), Socket.io, AWS and Postgres.",
                 tech: {
-                    front: "React + Redux",
+                    front: "React + Redux, Socket.io",
                     back: "Node.js + Express",
                     database: "Postgres",
                 },
@@ -89,9 +92,9 @@
                 img: "./synthboard.png",
                 name: "SynthBoard",
                 description:
-                    "Second full stack project ever! Part of my education at Spiced Academy. Made with Vue.js, Aws, Node.js",
+                    "Part of my education at Spiced Academy. Instagram style web app for Synth enthusiasts made with Vue.js, AWS, Node.js. Upload images of your favorites synthesizers, leave comments or just explore what the users like to play!",
                 tech: {
-                    front: "Vue.js",
+                    front: "Vue.js, AWS",
                     back: "Node.js + Express",
                     database: "Postgres",
                 },
@@ -116,7 +119,6 @@
                 },
             },
         ];
-
         for (var i = 0; i < projects.length; i++) {
             console.log(projects[i]);
 
@@ -150,28 +152,54 @@
             </div>
             `;
             modalContainer.appendChild(modal);
-
-            leftArrow.addEventListener("click", () => {
-                // body its wrong. its always current position + or  - 100%
-                modal.animate(
-                    [
-                        { transform: "translateX(-100%)" },
-                        { transform: "translateX(0px)" },
-                    ],
-                    { duration: 1000, fill: "forwards" }
-                );
-            });
-
-            rightArrow.addEventListener("click", () => {
-                modal.animate(
-                    [
-                        { transform: "translateX(0px" },
-                        { transform: "translateX(-100%)" },
-                    ],
-                    { duration: 1000, fill: "forwards" }
-                );
-            });
+            console.log("modalLeft", modal.offsetLeft);
+            modalArray.push(modal);
         }
+        console.log("modalArray", modalArray);
     };
     renderProject();
+
+    rightArrow.addEventListener("click", function () {
+        if (counter == 0) {
+            modalArray[counter].style.left = 100 + "%";
+            modalArray[counter + 1].style.right = 100 + "%";
+            counter++;
+            console.log(counter);
+            leftArrow.style.display = "inline";
+            rightArrow.style.left = "0" + "%";
+        } else if (counter == 1) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter + 1].style.right = 200 + "%";
+            counter++;
+            console.log(counter);
+        } else if (counter == 2) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter + 1].style.right = 300 + "%";
+            counter++;
+            console.log(counter);
+            rightArrow.style.display = "none";
+        }
+    });
+
+    leftArrow.addEventListener("click", function () {
+        if (counter == 1) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter - 1].style.left = 0 + "%";
+            counter--;
+            console.log(counter);
+            leftArrow.style.display = "none";
+            rightArrow.style.left = 92 + "%";
+        } else if (counter == 2) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter - 1].style.right = 100 + "%";
+            counter--;
+            console.log(counter);
+        } else if (counter == 3) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter - 1].style.right = 200 + "%";
+            counter--;
+            console.log(counter);
+            rightArrow.style.display = "inline";
+        }
+    });
 })();
