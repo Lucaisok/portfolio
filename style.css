@@ -9,12 +9,18 @@ body {
 }
 
 #first {
-    padding-left: 200px;
+    /* padding-left: 200px; */
     padding-right: 150px;
     padding-top: 20px;
     min-height: 100vh;
-    min-width: 100vh;
+    width: 100%;
     background-color: #ec6369;
+}
+
+#presentation {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .navBar {

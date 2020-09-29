@@ -4,7 +4,7 @@
     let i = 0;
     let textDiv = document.getElementById("presentation");
     let text =
-        "Hi, my name is Luca. I write codes and play synthesizers... This is what I do, feel free to have a look around !";
+        "Hi, my name is Luca. I write codes and play synthesizers... This is what I do, feel free to have a look around";
     let speed = 80;
 
     const modalContainer = document.getElementById("modalContainer");
