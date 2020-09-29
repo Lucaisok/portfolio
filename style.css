@@ -238,13 +238,45 @@ svg {
     right: auto; */
 }
 
-.modal img {
+.imageContainer {
     width: 50%;
     height: 95%;
     position: absolute;
     bottom: 3%;
     left: 1%;
+    /* box-shadow: 6px 4px lightgrey; */
+}
+
+.firstImg {
+    width: 55%;
+    height: 45%;
+    position: absolute;
+    left: 1%;
     box-shadow: 6px 4px lightgrey;
+    z-index: 2000;
+    border-radius: 10%;
+}
+
+.secondImg {
+    width: 85%;
+    height: 65%;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    box-shadow: 6px 4px lightgrey;
+    z-index: 3000;
+    border-radius: 10%;
+}
+
+.thirdImg {
+    width: 75%;
+    height: 45%;
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    box-shadow: 6px 4px lightgrey;
+    z-index: 4000;
+    border-radius: 10%;
 }
 
 #description {
