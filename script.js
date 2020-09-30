@@ -111,7 +111,7 @@
             },
             {
                 img: "./autonoma.png",
-                img2: "./results.png",
+                img2: "./autonomaLogo.png",
                 img3: "./seeYou.png",
                 name: "Autonoma",
                 description:
@@ -124,6 +124,23 @@
                 link: {
                     website: "http://www.autonomaindustriale.com/",
                     github: "https://github.com/Lucaisok/autonomaMailingList",
+                },
+            },
+            {
+                img: "./peerHome.png",
+                img2: "./release.png",
+                img3: "./releases.png",
+                name: "Peer Du",
+                description:
+                    "Showcase website for Peer Du, electronic music producer and dj based in Berlin. Features releases, mixes and contact pages. The style aim to reflect the aestethic of a techno oriented club, with dark background and gray links that lights up on hover.",
+                tech: {
+                    front: "Bootstrap",
+                    back: "/",
+                    database: "/",
+                },
+                link: {
+                    website: "https://lucatomarelli.live/",
+                    github: "",
                 },
             },
         ];
@@ -189,6 +206,10 @@
             modalArray[counter + 1].style.right = 300 + "%";
             counter++;
             console.log(counter);
+        } else if (counter == 3) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter + 1].style.right = 400 + "%";
+            counter++;
             rightArrow.style.display = "none";
         }
     });
@@ -209,6 +230,11 @@
         } else if (counter == 3) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.right = 200 + "%";
+            counter--;
+            console.log(counter);
+        } else if (counter == 4) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter - 1].style.right = 300 + "%";
             counter--;
             console.log(counter);
             rightArrow.style.display = "inline";
