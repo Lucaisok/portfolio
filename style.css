@@ -8,6 +8,16 @@ body {
     overflow-x: hidden;
 }
 
+#noMobile {
+    background-color: #ec6369;
+    text-align: center;
+    display: none;
+}
+
+#noMobile p {
+    color: #f4ecdf;
+}
+
 #first {
     margin: auto;
     padding-top: 20px;
@@ -428,11 +438,29 @@ footer {
     }
 
     .right {
-        left: 75%;
+        left: 90%;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+    #first {
+        display: none;
+    }
+    #second {
+        display: none;
+    }
+    #third {
+        display: none;
+    }
+    #fourth {
+        display: none;
+    }
+    #noMobile {
+        display: inline;
+    }
+}
+
+/* @media only screen and (max-width: 700px) {
     #first {
         display: none;
     }
@@ -474,9 +502,9 @@ footer {
     footer {
         display: none;
     }
-}
+} */
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     #second p {
         font-size: 23px;
     }
@@ -500,4 +528,4 @@ footer {
     #fourth p {
         text-align: left;
     }
-}
+} */
