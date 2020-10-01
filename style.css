@@ -12,7 +12,7 @@ body {
     margin: auto;
     padding-top: 20px;
     min-height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     background-color: #ec6369;
 }
 
@@ -51,7 +51,7 @@ body {
 
 #second {
     height: 100vh;
-    min-width: 100vh;
+    min-width: 100vw;
     background-color: #1f4554;
     overflow: hidden;
     margin: auto;
@@ -59,7 +59,7 @@ body {
 
 #second p {
     color: #f4ecdf;
-    font-size: 39px;
+    font-size: 2.8vw;
     width: 50%;
     padding-top: 20px;
     padding-left: 20px;
@@ -215,7 +215,7 @@ svg {
 }
 .right {
     animation: rightarrow 0.9s infinite alternate ease-in-out;
-    left: 92%;
+    left: 91%;
 }
 
 .modal {
@@ -306,7 +306,7 @@ svg {
     box-shadow: none;
     position: absolute;
     bottom: 4%;
-    left: 25%;
+    left: 30%;
 }
 
 #techStack {
@@ -405,6 +405,7 @@ footer {
     }
 
     #second p {
+        font-size: 40px;
         width: 90%;
         overflow: auto;
         margin: auto;
@@ -414,7 +415,89 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
+    #presentation {
+        max-width: 800px;
+    }
+
     #techStack {
         display: none;
     }
-} ;
+
+    #second p {
+        font-size: 35px;
+    }
+
+    .right {
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #first {
+        display: none;
+    }
+
+    #second p {
+        font-size: 30px;
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    #description {
+        left: 0.1%;
+        width: 90%;
+    }
+
+    #description h4 {
+        left: 10%;
+    }
+
+    #description p {
+        left: 10%;
+        width: 60%;
+    }
+
+    .right {
+        left: 65%;
+    }
+
+    #fourth h4 {
+        display: none;
+    }
+
+    #icons {
+        margin-top: 20%;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #second p {
+        font-size: 23px;
+    }
+    #description h4 {
+        left: 1%;
+    }
+
+    #description p {
+        left: 1%;
+        width: 50%;
+    }
+
+    .right {
+        left: 55%;
+    }
+
+    #icons {
+        text-align: left;
+    }
+
+    #fourth p {
+        text-align: left;
+    }
+}
