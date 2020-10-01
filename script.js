@@ -59,9 +59,9 @@
     const renderProject = () => {
         const projects = [
             {
-                img: "./collect.png",
-                img2: "./login.png",
-                img3: "./thanks.png",
+                img: "images/collect.png",
+                img2: "images/login.png",
+                img3: "images/thanks.png",
                 name: "Collect",
                 description:
                     "Developed as the final project of my Bootcamp at Spiced Academy, Collect is a fully functional web app for Restaurants, Bars and Clubs owners that keep tracks of the customers data and automatically delete it after 14 days. The purpose of this app is to help flattening the Covid curve making easier for bars and restaurants to keep track of their customers and, at the same time, improving the privacy protection of the users.",
@@ -76,9 +76,9 @@
                 },
             },
             {
-                img: "./social2.png",
-                img2: "./friends.png",
-                img3: "./socialRegister.png",
+                img: "images/social2.png",
+                img2: "images/friends.png",
+                img3: "images/socialRegister.png",
                 name: "Social IPA",
                 description:
                     "Social Network for IPA beer passionates. Features the most common social functionalities: login and logout / ask, accept, decline and delete friendship / send and receive private messages / upload pics and update bio. Made wit React + Redux, Node.js (Express), Socket.io, AWS and Postgres.",
@@ -93,9 +93,9 @@
                 },
             },
             {
-                img: "./synthboard.png",
-                img2: "./synthModal.png",
-                img3: "./synthBig.png",
+                img: "images/synthboard.png",
+                img2: "images/synthModal.png",
+                img3: "images/synthBig.png",
                 name: "SynthBoard",
                 description:
                     "Part of my education at Spiced Academy. Instagram style web app for Synth enthusiasts made with Vue.js, AWS, Node.js. Upload images of your favorites synthesizers, leave comments or just explore what the users like to play!",
@@ -110,9 +110,9 @@
                 },
             },
             {
-                img: "./autonoma.png",
-                img2: "./autonomaLogo.png",
-                img3: "./seeYou.png",
+                img: "images/autonoma.png",
+                img2: "images/autonomaLogo.png",
+                img3: "images/seeYou.png",
                 name: "Autonoma",
                 description:
                     "Minimalistic style mailing list subscriber for Autonoma Industriale, a Berlin based record label and party series focused on private concerts and underground events. Made with React, Express and Postgres. Features an admin panel to retrieve data from the database",
@@ -127,9 +127,9 @@
                 },
             },
             {
-                img: "./peerHome.png",
-                img2: "./release.png",
-                img3: "./releases.png",
+                img: "images/peerHome.png",
+                img2: "images/release.png",
+                img3: "images/releases.png",
                 name: "Peer Du",
                 description:
                     "Showcase website for Peer Du, electronic music producer and dj based in Berlin. Features releases, mixes and contact pages. The style aim to reflect the aestethic of a techno oriented club, with dark background and gray links that lights up on hover.",
@@ -169,13 +169,13 @@
                     <a
                             href=${projects[i].link.website}
                             target="_blank"
-                            ><img src="./visit.svg" alt="visit website"
+                            ><img src="images/visit.svg" alt="visit website"
                         /></a>
                         <a
                             id="seeCode"
                             href=${projects[i].link.github}
                             target="_blank"
-                            ><img src="./github.svg" alt="see code"
+                            ><img src="images/github.svg" alt="see code"
                         /></a>
                 </div>
             </div>
