@@ -305,8 +305,8 @@ svg {
     border: none;
     box-shadow: none;
     position: absolute;
-    bottom: 5%;
-    left: 10%;
+    bottom: 4%;
+    left: 30%;
 }
 
 #seeCode {
@@ -316,7 +316,7 @@ svg {
     box-shadow: none;
     position: absolute;
     bottom: 4%;
-    left: 30%;
+    left: 10%;
 }
 
 #techStack {

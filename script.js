@@ -125,7 +125,7 @@
                 },
             },
             {
-                img: "images/peerHome.png",
+                img: "images/duHome.png",
                 img2: "images/release.png",
                 img3: "images/releases.png",
                 name: "Peer Du",
@@ -166,16 +166,16 @@
                     <p><strong>DATABASE : </strong> ${projects[i].tech.database}</p>
                 </div>
                 <div id="lunch">
-                    <a
-                            href=${projects[i].link.website}
-                            target="_blank"
-                            ><img src="images/visit.svg" alt="visit website"
-                        /></a>
                         <a
                             id="seeCode"
                             href=${projects[i].link.github}
                             target="_blank"
                             ><img src="images/github.svg" alt="see code"
+                        /></a>
+                        <a
+                            href=${projects[i].link.website}
+                            target="_blank"
+                            ><img src="images/visit.svg" alt="visit website"
                         /></a>
                 </div>
             </div>
