@@ -1,11 +1,9 @@
 (function () {
-    console.log("js connected");
-
     let i = 0;
-    let textDiv = document.getElementById("presentation");
-    let text =
+    const textDiv = document.getElementById("presentation");
+    const text =
         "Hi, my name is Luca. I write codes and play synthesizers... This is what I do, feel free to have a look around";
-    let speed = 80;
+    const speed = 80;
 
     const modalContainer = document.getElementById("modalContainer");
 
@@ -145,8 +143,6 @@
             },
         ];
         for (var i = 0; i < projects.length; i++) {
-            console.log(projects[i]);
-
             let modal = document.createElement("div");
             modal.setAttribute("class", "modal");
 
@@ -237,7 +233,6 @@
             `;
             }
             modalContainer.appendChild(modal);
-            console.log("modalLeft", modal.offsetLeft);
             modalArray.push(modal);
         }
         console.log("modalArray", modalArray);
@@ -249,19 +244,16 @@
             modalArray[counter].style.left = 100 + "%";
             modalArray[counter + 1].style.right = 100 + "%";
             counter++;
-            console.log(counter);
             leftArrow.style.display = "inline";
             rightArrow.style.left = "0" + "%";
         } else if (counter == 1) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter + 1].style.right = 200 + "%";
             counter++;
-            console.log(counter);
         } else if (counter == 2) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter + 1].style.right = 300 + "%";
             counter++;
-            console.log(counter);
         } else if (counter == 3) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter + 1].style.right = 400 + "%";
@@ -275,24 +267,20 @@
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.left = 0 + "%";
             counter--;
-            console.log(counter);
             leftArrow.style.display = "none";
             rightArrow.style.left = 92 + "%";
         } else if (counter == 2) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.right = 100 + "%";
             counter--;
-            console.log(counter);
         } else if (counter == 3) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.right = 200 + "%";
             counter--;
-            console.log(counter);
         } else if (counter == 4) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.right = 300 + "%";
             counter--;
-            console.log(counter);
             rightArrow.style.display = "inline";
         }
     });
