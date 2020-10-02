@@ -150,7 +150,11 @@
             let modal = document.createElement("div");
             modal.setAttribute("class", "modal");
 
-            modal.innerHTML = `
+            if (
+                projects[i].link.website != "" &&
+                projects[i].link.github != ""
+            ) {
+                modal.innerHTML = `
             <div class="imageContainer">
             <img class="firstImg" src="${projects[i].img}" alt="" />
             <img class="secondImg" src="${projects[i].img2}" alt="" />
@@ -180,6 +184,58 @@
                 </div>
             </div>
             `;
+            } else if (projects[i].link.github == "") {
+                modal.innerHTML = `
+            <div class="imageContainer">
+            <img class="firstImg" src="${projects[i].img}" alt="" />
+            <img class="secondImg" src="${projects[i].img2}" alt="" />
+            <img class="thirdImg" src="${projects[i].img3}" alt="" />
+            </div>
+            <div id="description">
+                <h4>${projects[i].name}</h4>
+                <p>${projects[i].description}</p>
+                <div id="techStack">
+                    <h6>Tech Stack</h6>
+                    <p><strong>FRONT END :</strong> ${projects[i].tech.front}</p>
+                    <p><strong>BACK END : </strong> ${projects[i].tech.back}</p>
+                    <p><strong>DATABASE : </strong> ${projects[i].tech.database}</p>
+                </div>
+                <div id="lunch">
+                    <a
+                            href=${projects[i].link.website}
+                            target="_blank"
+                            ><img src="images/visit.svg" alt="visit website"
+                        /></a>
+                </div>
+            </div>
+            `;
+            } else if (projects[i].link.website == "") {
+                modal.innerHTML = `
+            <div class="imageContainer">
+            <img class="firstImg" src="${projects[i].img}" alt="" />
+            <img class="secondImg" src="${projects[i].img2}" alt="" />
+            <img class="thirdImg" src="${projects[i].img3}" alt="" />
+            </div>
+            <div id="description">
+                <h4>${projects[i].name}</h4>
+                <p>${projects[i].description}</p>
+                <div id="techStack">
+                    <h6>Tech Stack</h6>
+                    <p><strong>FRONT END :</strong> ${projects[i].tech.front}</p>
+                    <p><strong>BACK END : </strong> ${projects[i].tech.back}</p>
+                    <p><strong>DATABASE : </strong> ${projects[i].tech.database}</p>
+                </div>
+                <div id="lunch">
+                        <a
+                            id="seeCode"
+                            href=${projects[i].link.github}
+                            target="_blank"
+                            ><img src="images/github.svg" alt="see code"
+                        /></a>
+                </div>
+            </div>
+            `;
+            }
             modalContainer.appendChild(modal);
             console.log("modalLeft", modal.offsetLeft);
             modalArray.push(modal);
