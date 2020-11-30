@@ -239,16 +239,6 @@
             counter++;
             rightArrow.style.display = "none";
         }
-        // } else if (counter == 3) {
-        //     modalArray[counter].style.right = 0 + "%";
-        //     modalArray[counter + 1].style.right = 400 + "%";
-        //     counter++;
-        // } else if (counter == 4) {
-        //     modalArray[counter].style.right = 0 + "%";
-        //     modalArray[counter + 1].style.right = 500 + "%";
-        //     counter++;
-        //     rightArrow.style.display = "none";
-        // }
     });
 
     leftArrow.addEventListener("click", function () {
@@ -268,15 +258,5 @@
             counter--;
             rightArrow.style.display = "inline";
         }
-        // } else if (counter == 4) {
-        //     modalArray[counter].style.right = 0 + "%";
-        //     modalArray[counter - 1].style.right = 300 + "%";
-        //     counter--;
-        // } else if (counter == 5) {
-        //     modalArray[counter].style.right = 0 + "%";
-        //     modalArray[counter - 1].style.right = 400 + "%";
-        //     counter--;
-        //     rightArrow.style.display = "inline";
-        // }
     });
 })();
