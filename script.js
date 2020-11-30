@@ -124,40 +124,6 @@
                     github: "https://github.com/Lucaisok/autonomaMailingList",
                 },
             },
-            {
-                img: "images/duHome.png",
-                img2: "images/release.png",
-                img3: "images/releases.png",
-                name: "Peer Du",
-                description:
-                    "Showcase website for Peer Du, electronic music producer and dj based in Berlin. Features releases, mixes and contact pages. The style aim to reflect the aestethic of a techno oriented club, with dark background and gray links that lights up on hover.",
-                tech: {
-                    front: "Bootstrap",
-                    back: "/",
-                    database: "/",
-                },
-                link: {
-                    website: "https://lucatomarelli.live/",
-                    github: "",
-                },
-            },
-            {
-                img: "images/ideaAbout.png",
-                img2: "images/ideaTwo.png",
-                img3: "images/ideaContact.png",
-                name: "Portfolio",
-                description:
-                    "Portfolio idea for imaginary photographer P. Saintclair. Heavily focused on the artist works, this showcase website features a Recent works section, About and Contact page. On hover every works reveals title and description. The style reflect the artist´s massive usage of black, white and gray shades.",
-                tech: {
-                    front: "/",
-                    back: "/",
-                    database: "/",
-                },
-                link: {
-                    website: "https://portfolio-idea.herokuapp.com/",
-                    github: "https://github.com/Lucaisok/Photgrapher-Portfolio",
-                },
-            },
         ];
         for (var i = 0; i < projects.length; i++) {
             let modal = document.createElement("div");
@@ -271,16 +237,18 @@
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter + 1].style.right = 300 + "%";
             counter++;
-        } else if (counter == 3) {
-            modalArray[counter].style.right = 0 + "%";
-            modalArray[counter + 1].style.right = 400 + "%";
-            counter++;
-        } else if (counter == 4) {
-            modalArray[counter].style.right = 0 + "%";
-            modalArray[counter + 1].style.right = 500 + "%";
-            counter++;
             rightArrow.style.display = "none";
         }
+        // } else if (counter == 3) {
+        //     modalArray[counter].style.right = 0 + "%";
+        //     modalArray[counter + 1].style.right = 400 + "%";
+        //     counter++;
+        // } else if (counter == 4) {
+        //     modalArray[counter].style.right = 0 + "%";
+        //     modalArray[counter + 1].style.right = 500 + "%";
+        //     counter++;
+        //     rightArrow.style.display = "none";
+        // }
     });
 
     leftArrow.addEventListener("click", function () {
@@ -298,15 +266,17 @@
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.right = 200 + "%";
             counter--;
-        } else if (counter == 4) {
-            modalArray[counter].style.right = 0 + "%";
-            modalArray[counter - 1].style.right = 300 + "%";
-            counter--;
-        } else if (counter == 5) {
-            modalArray[counter].style.right = 0 + "%";
-            modalArray[counter - 1].style.right = 400 + "%";
-            counter--;
             rightArrow.style.display = "inline";
         }
+        // } else if (counter == 4) {
+        //     modalArray[counter].style.right = 0 + "%";
+        //     modalArray[counter - 1].style.right = 300 + "%";
+        //     counter--;
+        // } else if (counter == 5) {
+        //     modalArray[counter].style.right = 0 + "%";
+        //     modalArray[counter - 1].style.right = 400 + "%";
+        //     counter--;
+        //     rightArrow.style.display = "inline";
+        // }
     });
 })();
