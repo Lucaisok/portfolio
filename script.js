@@ -74,6 +74,23 @@
                 },
             },
             {
+                img: "images/lisart1.png",
+                img2: "images/lisart2.png",
+                img3: "images/lisart3.png",
+                name: "Lisart",
+                description:
+                    "Full responsive showcase website for the Salzburg based floral artist Lisa-Maria Thalmayr aka Lisart. The front end is made with React, Node.js in duty of the back end. Features an admin panel to let her add and delete projects on her own. I used multer and AWS S3 to upload content on the cloud, AWS SES for the contact form and Postgres as a database.",
+                tech: {
+                    front: "React",
+                    back: "Node.js + Express",
+                    database: "Postgres",
+                },
+                link: {
+                    website: "https://lisartearth.herokuapp.com/",
+                    github: "https://github.com/Lucaisok/lisart",
+                },
+            },
+            {
                 img: "images/social2.png",
                 img2: "images/friends.png",
                 img3: "images/socialRegister.png",
@@ -237,6 +254,10 @@
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter + 1].style.right = 300 + "%";
             counter++;
+        } else if (counter == 3) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter + 1].style.right = 400 + "%";
+            counter++;
             rightArrow.style.display = "none";
         }
     });
@@ -255,6 +276,10 @@
         } else if (counter == 3) {
             modalArray[counter].style.right = 0 + "%";
             modalArray[counter - 1].style.right = 200 + "%";
+            counter--;
+        } else if (counter == 4) {
+            modalArray[counter].style.right = 0 + "%";
+            modalArray[counter - 1].style.right = 300 + "%";
             counter--;
             rightArrow.style.display = "inline";
         }
