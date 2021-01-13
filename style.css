@@ -31,6 +31,7 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     min-width: 100vh;
+    text-align: center;
 }
 
 .navBar {
@@ -71,7 +72,7 @@ body {
     color: #f4ecdf;
     font-size: 2.8vw;
     width: 50%;
-    padding-top: 20px;
+    /* padding-top: 5px; */
     padding-left: 20px;
     position: relative;
     bottom: 25px;
@@ -400,7 +401,7 @@ footer {
     width: 100%;
     height: 50px;
     position: relative;
-    top: 29%;
+    top: 25.5%;
     font-size: 23px;
     padding-left: 20px;
 }
@@ -459,73 +460,3 @@ footer {
         display: inline;
     }
 }
-
-/* @media only screen and (max-width: 700px) {
-    #first {
-        display: none;
-    }
-
-    #second p {
-        font-size: 30px;
-    }
-
-    .imageContainer {
-        display: none;
-    }
-
-    #description {
-        left: 0.1%;
-        width: 90%;
-    }
-
-    #description h4 {
-        left: 10%;
-    }
-
-    #description p {
-        left: 10%;
-        width: 60%;
-    }
-
-    .right {
-        left: 65%;
-    }
-
-    #fourth h4 {
-        display: none;
-    }
-
-    #icons {
-        margin-top: 20%;
-    }
-
-    footer {
-        display: none;
-    }
-} */
-
-/* @media only screen and (max-width: 500px) {
-    #second p {
-        font-size: 23px;
-    }
-    #description h4 {
-        left: 1%;
-    }
-
-    #description p {
-        left: 1%;
-        width: 50%;
-    }
-
-    .right {
-        left: 55%;
-    }
-
-    #icons {
-        text-align: left;
-    }
-
-    #fourth p {
-        text-align: left;
-    }
-} */
