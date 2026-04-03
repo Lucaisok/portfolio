@@ -1,0 +1,64 @@
+"use client";
+import { motion } from 'motion/react';
+import { Terminal } from 'lucide-react';
+import { routes } from '@/src/lib/routes';
+import { Button } from '@/src/components/Button/Button';
+import { siteContent } from '@/src/content/global';
+import styles from './Hero.module.css';
+
+export const Hero = () => {
+    return (
+        <section className={styles.section}>
+            <div className={styles.gridBackground} />
+            <div className={styles.gradientOverlay} />
+            <div className={styles.container}>
+                <div className={styles.content}>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className={styles.badgeRow}
+                    >
+                        <Terminal className={styles.badgeIcon} />
+                        <span className={styles.badgeText}>Full Stack Developer</span>
+                    </motion.div>
+
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className={styles.title}
+                    >
+                        Building Digital
+                        <br />
+                        <span className={styles.titleMuted}>Products That Scale</span>
+                    </motion.h1>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className={styles.description}
+                    >
+                        5 years of experience crafting high-performance web and mobile applications.
+                        Specialized in React, React Native, and modern JavaScript ecosystems.
+                    </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className={styles.actions}
+                    >
+                        <Button href={routes.projects} variant="primary">
+                            {siteContent.viewProjects}
+                        </Button>
+                        <Button href={routes.contact} variant="secondary">
+                            {siteContent.getInTouch}
+                        </Button>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+};

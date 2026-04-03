@@ -1,6 +1,11 @@
+import { Hero } from "../components/Home/Hero/Hero";
+import styles from "./page.module.css";
+
 const Home = () => {
   return (
-    <div></div>
+    <main className={styles.main}>
+      <Hero />
+    </main>
   );
 };
 
