@@ -33,3 +33,9 @@
 .link:hover {
     color: var(--color-accent);
 }
+
+@media (max-width: 768px) {
+    .footer {
+        display: none;
+    }
+}

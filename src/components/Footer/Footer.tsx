@@ -17,11 +17,14 @@ export const Footer = () => {
         >
             <div className={styles.container}>
                 <p className={styles.copy}>
-                    {`${content.year} ${siteContent.name}. ${content.developed} `}
-                    <a href={BERLIN_FORECAST_URL} target="_blank" rel="noreferrer" className={styles.link}>
-                        {berlinWeather}
-                    </a>{' '}
-                    {content.berlin}
+                    <span className={styles.fullLine}>{`${content.year} ${siteContent.name}. `}</span>
+                    <span className={styles.developed}>
+                        {`${content.developed} `}
+                        <a href={BERLIN_FORECAST_URL} target="_blank" rel="noreferrer" className={styles.link}>
+                            {berlinWeather}
+                        </a>{' '}
+                        {content.berlin}
+                    </span>
                 </p>
             </div>
         </motion.footer>

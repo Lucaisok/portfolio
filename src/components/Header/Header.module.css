@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     z-index: var(--z-header);
+    background-color: var(--color-surface);
     transition: background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s;
 }
 

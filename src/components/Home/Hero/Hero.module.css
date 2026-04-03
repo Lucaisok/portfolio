@@ -85,8 +85,35 @@
 }
 
 @media (max-width: 767px) {
+    .section {
+        margin-top: var(--header-height);
+        min-height: calc(100% - var(--header-height));
+        align-items: stretch;
+    }
+
     .title {
-        font-size: 3rem;
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.375rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding-top: var(--container-padding-y);
+    }
+
+    .actions {
+        margin-top: auto;
+        padding-bottom: var(--container-padding-y);
     }
 }
 
