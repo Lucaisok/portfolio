@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  /* colours */
+  --background: black;
+  --foreground: #ffffff;
+  --color-muted: #a1a1aa;
+  --color-border: #27272a;
+  --color-accent: #34d399;
+  --color-surface-overlay: rgba(9, 9, 11, 0.8);
+
+  /* typography */
+  --font-family-sans: var(--font-geist-sans);
+
+  /* transitions */
+  --transition-color: color 0.15s;
+
+  /* z-index scale */
+  --z-header: 50;
+
+  /* breakpoints (for reference in JS; media queries use the raw values) */
+  --bp-md: 768px;
+
+  /* layout */
+  --container-max-width: 1280px;
+  --container-padding-x: 1.5rem;
+  --container-padding-y: 1.5rem;
+  --footer-padding-y: 1.875rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-sans), sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Layout utilities ─────────────────────────────────────────────────────── */
+
+.site-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
