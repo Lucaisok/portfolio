@@ -7,6 +7,7 @@ import { siteContent } from '@/src/content/global';
 import styles from './Hero.module.css';
 
 export const Hero = () => {
+    const content = siteContent.home;
     return (
         <section className={styles.section}>
             <div className={styles.gridBackground} />
@@ -20,30 +21,26 @@ export const Hero = () => {
                         className={styles.badgeRow}
                     >
                         <Terminal className={styles.badgeIcon} />
-                        <span className={styles.badgeText}>Full Stack Developer</span>
+                        <span className={styles.badgeText}>{content.fullStackDeveloper}</span>
                     </motion.div>
-
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className={styles.title}
                     >
-                        Building Digital
+                        {content.title}
                         <br />
-                        <span className={styles.titleMuted}>Products That Scale</span>
+                        <span className={styles.titleMuted}>{content.subTitle}</span>
                     </motion.h1>
-
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className={styles.description}
                     >
-                        5 years of experience crafting high-performance web and mobile applications.
-                        Specialized in React, React Native, and modern JavaScript ecosystems.
+                        {content.description}
                     </motion.p>
-
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
