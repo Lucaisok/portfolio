@@ -4,6 +4,7 @@ import { Terminal } from 'lucide-react';
 import { routes } from '@/src/lib/routes';
 import { Button } from '@/src/components/Button/Button';
 import { siteContent } from '@/src/content/global';
+import { HeroAccentCanvas } from './HeroAccentCanvas';
 import styles from './Hero.module.css';
 
 export const Hero = () => {
@@ -12,6 +13,9 @@ export const Hero = () => {
         <section className={styles.section}>
             <div className={styles.gridBackground} />
             <div className={styles.gradientOverlay} />
+            <div className={styles.visualDesktop}>
+                <HeroAccentCanvas />
+            </div>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <motion.div
@@ -41,6 +45,14 @@ export const Hero = () => {
                     >
                         {content.description}
                     </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.25 }}
+                        className={styles.visualMobile}
+                    >
+                        <HeroAccentCanvas />
+                    </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

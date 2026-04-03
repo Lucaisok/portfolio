@@ -19,6 +19,7 @@
 
   /* z-index scale */
   --z-header: 50;
+  --z-visual: 10;
 
   /* breakpoints (for reference in JS; media queries use the raw values) */
   --bp-md: 768px;
@@ -29,6 +30,17 @@
   --container-padding-x: 1.5rem;
   --container-padding-y: 1.5rem;
   --footer-padding-y: 1.875rem;
+  --hero-visual-width: 34rem;
+  --hero-visual-height: 28rem;
+  --hero-visual-opacity: 0.75;
+  --hero-visual-desktop-bottom: -2.5rem;
+  --hero-visual-desktop-right: 2rem;
+  --hero-visual-desktop-bottom-offset: 2rem;
+  --hero-visual-mobile-width: 100%;
+  --hero-visual-mobile-height: 10rem;
+  --hero-title-mobile-size: 3.25rem;
+  --hero-description-mobile-size: 1.25rem;
+  --hero-visual-spacing-top: 2rem;
 
   /* buttons */
   --button-padding-y: 1rem;
