@@ -1,0 +1,38 @@
+.container {
+    max-width: 48rem;
+    margin-bottom: 6rem;
+}
+
+.badge {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.titleMuted {
+    color: var(--color-muted-strong);
+}
+
+.paragraph,
+.paragraphFirst {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    line-height: 1.625;
+}
+
+.paragraphFirst {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3.75rem;
+    }
+}

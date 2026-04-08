@@ -1,0 +1,47 @@
+.card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: var(--button-secondary-hover);
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listItem {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.listItem + .listItem {
+    margin-top: 0.75rem;
+}
+
+.bullet {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 9999px;
+    background-color: var(--color-border);
+    flex-shrink: 0;
+}
