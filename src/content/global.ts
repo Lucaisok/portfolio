@@ -1,3 +1,4 @@
+import { b } from "motion/react-client";
 import { title } from "process";
 
 export const siteContent = {
@@ -19,6 +20,13 @@ export const siteContent = {
             "I'm a full stack developer with a passion for creating efficient, scalable solutions. My expertise spans across modern web and mobile technologies, with a strong emphasis on frontend development and user experience.",
         paragraph:
             "Over the past 5 years, I've collaborated with startups and established companies to deliver products that not only meet technical requirements but exceed user expectations."
+    },
+    contact: {
+        badge: "// CONTACT",
+        title: "Let's Work Together",
+        paragraph:
+            "I'm currently available for freelance projects and full-time opportunities. If you have a project in mind or just want to connect, feel free to reach out.",
+        button: "Send a Message"
     },
     notFound: {
         badge: "404 // ROUTE NOT FOUND",
