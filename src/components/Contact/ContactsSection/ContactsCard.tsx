@@ -10,12 +10,14 @@ interface ContactsCardProps {
 
 export const ContactsCard = ({ contact, index }: ContactsCardProps) => {
     const Icon = contact.icon;
+    const isExternalLink = !contact.download && contact.href.startsWith('http');
 
     return <motion.a
         key={contact.label}
         href={contact.href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={isExternalLink ? '_blank' : undefined}
+        rel={isExternalLink ? 'noopener noreferrer' : undefined}
+        download={contact.download}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
