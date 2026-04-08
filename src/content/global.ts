@@ -1,6 +1,3 @@
-import { b } from "motion/react-client";
-import { title } from "process";
-
 export const siteContent = {
     name: "Luca Tomarelli",
     viewProjects: "View Projects",
