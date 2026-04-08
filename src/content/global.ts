@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const siteContent = {
     name: "Luca Tomarelli",
     viewProjects: "View Projects",
@@ -17,6 +19,15 @@ export const siteContent = {
             "I'm a full stack developer with a passion for creating efficient, scalable solutions. My expertise spans across modern web and mobile technologies, with a strong emphasis on frontend development and user experience.",
         paragraph:
             "Over the past 5 years, I've collaborated with startups and established companies to deliver products that not only meet technical requirements but exceed user expectations."
+    },
+    notFound: {
+        badge: "404 // ROUTE NOT FOUND",
+        title: "This page drifted",
+        titleMuted: "outside the map",
+        description:
+            "The route you requested does not exist, or it has moved somewhere else. Head back to the homepage or continue through the portfolio from a known entry point.",
+        backHomeButton: "Back Home",
+        aboutMeButton: "About Me"
     },
     footer: {
         year: "© 2026",
