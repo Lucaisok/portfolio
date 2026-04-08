@@ -1,0 +1,6 @@
+.section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: var(--color-surface);
+    color: var(--foreground);
+}

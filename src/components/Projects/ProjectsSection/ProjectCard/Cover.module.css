@@ -1,0 +1,30 @@
+.frame {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--button-secondary-hover);
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 0.7s;
+}
+
+.frame:hover .image,
+:global(.group:hover) .image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--color-surface), transparent);
+    opacity: 0.6;
+}
+
+@media (min-width: 1024px) {
+    .orderDesktop {
+        order: 2;
+    }
+}

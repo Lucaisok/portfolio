@@ -1,0 +1,14 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.tag {
+    padding: 0.5rem 1rem;
+    background-color: var(--button-secondary-hover);
+    border: 1px solid var(--color-border);
+    font-size: 0.875rem;
+    color: var(--color-muted);
+}

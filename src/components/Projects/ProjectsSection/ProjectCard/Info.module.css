@@ -1,0 +1,25 @@
+.meta {
+    font-size: 0.875rem;
+    color: var(--color-muted-strong);
+    margin-bottom: 1rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.title {
+    margin: 0 0 1.5rem;
+    font-size: 2.25rem;
+    line-height: 1.25;
+}
+
+.description {
+    margin: 0 0 2rem;
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}

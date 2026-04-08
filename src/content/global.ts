@@ -1,3 +1,5 @@
+import { projects } from "../lib/projects";
+
 export const siteContent = {
     name: "Luca Tomarelli",
     viewProjects: "View Projects",
@@ -24,6 +26,13 @@ export const siteContent = {
         paragraph:
             "I'm currently available for freelance projects and full-time opportunities. If you have a project in mind or just want to connect, feel free to reach out.",
         button: "Send a Message"
+    },
+    projects: {
+        badge: "// PROJECTS",
+        title: "Selected Works",
+        projectNumber: "• PROJECT 0",
+        liveDemo: "Live Demo",
+        viewCode: "View Code"
     },
     notFound: {
         badge: "404 // ROUTE NOT FOUND",

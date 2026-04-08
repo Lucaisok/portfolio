@@ -1,0 +1,22 @@
+.container {
+    margin-bottom: 6rem;
+}
+
+.badge {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3.75rem;
+    }
+}
