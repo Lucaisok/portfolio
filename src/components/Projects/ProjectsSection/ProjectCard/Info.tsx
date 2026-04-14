@@ -6,14 +6,15 @@ interface InfoProps {
     id: number;
     title: string,
     description: string;
+    details: string;
 }
 
-export const Info = ({ year, id, title, description }: InfoProps) => {
+export const Info = ({ year, id, title, description, details }: InfoProps) => {
     const content = siteContent.projects;
 
     return (
         <>
-            <div className={styles.meta}>{year} {content.projectNumber}{id}</div>
+            <div className={styles.meta}>{year} • {details}</div>
             <h3 className={styles.title}>
                 {title}
             </h3>

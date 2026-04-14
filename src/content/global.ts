@@ -1,5 +1,3 @@
-import { projects } from "../lib/projects";
-
 export const siteContent = {
     name: "Luca Tomarelli",
     viewProjects: "View Projects",
@@ -30,7 +28,6 @@ export const siteContent = {
     projects: {
         badge: "// PROJECTS",
         title: "Selected Works",
-        projectNumber: "• PROJECT 0",
         liveDemo: "Live Demo",
         viewCode: "View Code"
     },
