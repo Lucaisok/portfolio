@@ -24,7 +24,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         <div className={styles.grid}>
             <Cover index={index} image={project.image} title={project.title} />
             <div className={index % 2 === 1 ? styles.contentReversed : undefined}>
-                <Info details={project.details} id={project.id} title={project.title} description={project.description} year={project.year} />
+                <Info details={project.details} id={project.id} title={project.title} description={project.shortDescription} year={project.year} />
                 <Tags tags={project.tags} />
                 <Actions url={project.url} codeUrl={project.codeUrl} />
             </div>
