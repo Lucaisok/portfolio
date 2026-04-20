@@ -10,8 +10,16 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio website.",
+  title: {
+    default: "Luca Tomarelli | Full Stack Developer",
+    template: "%s | Luca Tomarelli",
+  },
+  description:
+    "Portfolio of Luca Tomarelli, full stack developer building high-performance web and mobile products.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

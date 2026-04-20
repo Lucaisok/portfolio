@@ -1,7 +1,14 @@
+import type { Metadata } from 'next';
 import { ContactsSection } from '@/src/components/Contact/ContactsSection/ContactsSection';
 import { Description } from '@/src/components/Contact/Description/Description';
 import { Message } from '@/src/components/Contact/MessageSection/Message';
 import styles from './page.module.css';
+
+export const metadata: Metadata = {
+    title: 'Contact',
+    description:
+        'Get in touch with Luca Tomarelli for freelance projects, collaborations, or full-time opportunities.',
+};
 
 export const Contact = () => {
     return <section id="contact" className={styles.section}>

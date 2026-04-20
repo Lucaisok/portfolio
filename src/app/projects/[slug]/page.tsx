@@ -1,4 +1,4 @@
-"use client";
+import type { Metadata } from 'next';
 import { projects } from '@/src/lib/projects';
 import NotFound from '../../not-found';
 import { Hero } from '@/src/components/Project/Hero/Hero';
@@ -11,6 +11,23 @@ import styles from './page.module.css';
 interface ProjectPageProps {
     params: Promise<{ slug: string; }>;
 }
+
+export const generateMetadata = async ({ params }: ProjectPageProps): Promise<Metadata> => {
+    const { slug } = await Promise.resolve(params);
+    const project = projects.find((item) => item.slug === slug);
+
+    if (!project) {
+        return {
+            title: 'Project Not Found',
+            description: 'The requested project page could not be found in this portfolio.',
+        };
+    }
+
+    return {
+        title: project.title,
+        description: project.shortDescription,
+    };
+};
 
 export const ProjectPage = async ({ params }: ProjectPageProps) => {
     const { slug } = await Promise.resolve(params);
