@@ -28,8 +28,21 @@ export const siteContent = {
     projects: {
         badge: "// PROJECTS",
         title: "Selected Works",
-        liveDemo: "Live Demo",
-        viewCode: "View Code"
+        viewProject: "View Project",
+    },
+    project: {
+        description: {
+            badge: "// ABOUT THE PROJECT",
+            liveDemo: "Live Demo",
+            viewCode: "View Code"
+        },
+        contact: {
+            title: "Like what you see?",
+            description:
+                "Let's discuss how I can help bring your next project to life with the same level of quality and attention to detail.",
+            getInTouch: "Get In Touch",
+            viewMore: "View More Projects"
+        }
     },
     notFound: {
         badge: "404 // ROUTE NOT FOUND",

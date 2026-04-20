@@ -1,0 +1,39 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-surface);
+}
+
+.itemOffset {
+    margin-top: 5rem;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.7s;
+}
+
+.item:hover .image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #09090b, transparent 60%);
+    opacity: 0.4;
+}
+
+@media (min-width: 1024px) {
+    .gallery {
+        grid-column: span 5;
+    }
+}

@@ -6,6 +6,8 @@ import { Info } from './Info';
 import { Cover } from './Cover';
 import { Actions } from './Actions';
 import styles from './ProjectCard.module.css';
+import Link from 'next/link';
+import { routes } from '@/src/lib/routes';
 
 interface ProjectCardProps {
     project: Project;
@@ -21,13 +23,13 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         transition={{ duration: 0.8 }}
         className={styles.card}
     >
-        <div className={styles.grid}>
+        <Link className={styles.grid} href={routes.project(project.slug)}>
             <Cover index={index} image={project.image} title={project.title} />
             <div className={index % 2 === 1 ? styles.contentReversed : undefined}>
                 <Info details={project.details} id={project.id} title={project.title} description={project.shortDescription} year={project.year} />
                 <Tags tags={project.tags} />
                 <Actions url={project.url} codeUrl={project.codeUrl} />
             </div>
-        </div>
+        </Link>
     </motion.div>;
 };

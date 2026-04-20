@@ -1,0 +1,6 @@
+.page {
+    min-height: 100vh;
+    padding-top: 6rem;
+    background-color: #09090b;
+    color: var(--foreground);
+}

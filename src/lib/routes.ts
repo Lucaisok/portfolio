@@ -2,6 +2,7 @@ export const routes = {
     home: `/`,
     about: `/about`,
     projects: `/projects`,
+    project: (slug: string) => `/projects/${slug}`,
     contact: `/contact`
 } as const;
 

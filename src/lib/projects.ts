@@ -1,5 +1,6 @@
 export interface Project {
     id: number;
+    slug: string;
     title: string;
     shortDescription: string;
     description: string;
@@ -7,6 +8,7 @@ export interface Project {
     tags: string[];
     year: string;
     details: string;
+    images?: string[];
     url?: string;
     codeUrl?: string;
 }
@@ -14,6 +16,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
+        slug: 'sonnen-app',
         title: 'Sonnen App',
         shortDescription: `Mobile application that enables users to monitor and manage their home energy system, providing real-time insights into solar production, battery status, and energy consumption.`,
         description: `The Sonnen App is a mobile application designed to give users full visibility and control over their home energy ecosystem, including solar panels, battery storage, and connected devices such as EV chargers.
@@ -31,6 +34,7 @@ From a development perspective, the application focuses on performance, usabilit
     },
     {
         id: 2,
+        slug: 'house-of-rome',
         title: 'House of Rome',
         shortDescription: 'A multilingual booking website for a Rome-based hospitality business, featuring apartment listings, availability integration, and a seamless user experience optimized for SEO and conversions.',
         description: `House of Rome is a modern, performance-focused website developed for a short-term rental business in Rome. The platform showcases multiple apartments with dedicated pages, optimized for both search engines and user experience.
@@ -47,6 +51,7 @@ Particular attention was given to performance, accessibility, and mobile usabili
     },
     {
         id: 3,
+        slug: 'smart-it',
         title: 'Smart it',
         shortDescription: 'A redesigned corporate website for a cleaning and facility management company, focused on local SEO, lead generation, and clear service positioning',
         description: `SmartIT is a corporate website developed for a cleaning and facility management company operating in the Milan area. The project involved a complete redesign with a strong emphasis on local SEO, service clarity, and conversion optimization.
@@ -63,6 +68,7 @@ The interface is designed to communicate professionalism and trust, with clear c
     },
     {
         id: 4,
+        slug: 'noloni',
         title: 'Noloni',
         shortDescription: 'Cross-platform mobile video conferencing application with a full-stack architecture, enabling real-time communication and user management across iOS and Android.',
         description: `Noloni is a cross-platform video conferencing application developed for iOS and Android, built with React Native and supported by a Node.js backend.
