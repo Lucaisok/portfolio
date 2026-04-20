@@ -8,7 +8,7 @@ import { siteContent } from '@/src/content/global';
 interface DescriptionProps {
     title: string;
     description: string;
-    images?: string[];
+    images: string[];
     url?: string;
     codeUrl?: string;
 }

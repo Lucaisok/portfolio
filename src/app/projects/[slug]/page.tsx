@@ -20,9 +20,9 @@ export const ProjectPage = async ({ params }: ProjectPageProps) => {
 
     return <div className={styles.page}>
         <Hero year={project.year} tags={project.tags} title={project.title} details={project.details} shortDescription={project.shortDescription} />
-        <Cover image={project.image} title={project.title} />
+        <Cover image={project.heroImage} title={project.title} />
         <Description description={project.description} url={project.url} codeUrl={project.codeUrl} title={project.title} images={project.images} />
-        <ImageSection image={project.image} title={project.title} />
+        <ImageSection image={project.wideImage} title={project.title} />
         <ContactSection />
     </div>;
 };
