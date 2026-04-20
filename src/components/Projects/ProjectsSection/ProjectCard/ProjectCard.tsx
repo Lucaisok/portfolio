@@ -28,7 +28,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
             <div className={index % 2 === 1 ? styles.contentReversed : undefined}>
                 <Info details={project.details} id={project.id} title={project.title} description={project.shortDescription} year={project.year} />
                 <Tags tags={project.tags} />
-                <Actions url={project.url} codeUrl={project.codeUrl} />
+                <Actions />
             </div>
         </Link>
     </motion.div>;

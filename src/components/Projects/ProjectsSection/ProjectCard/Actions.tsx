@@ -2,15 +2,8 @@ import { siteContent } from '@/src/content/global';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import styles from './Actions.module.css';
 
-interface ActionProps {
-    url?: string;
-    codeUrl?: string;
-}
-
-export const Actions = ({ url, codeUrl }: ActionProps) => {
+export const Actions = () => {
     const content = siteContent.projects;
-
-    if (!url && !codeUrl) return;
 
     return <div className={styles.actions}>
         <div
