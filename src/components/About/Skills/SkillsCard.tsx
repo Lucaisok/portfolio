@@ -2,6 +2,7 @@
 import { Skill } from "./SkillsSection";
 import { motion } from 'motion/react';
 import styles from './SkillsCard.module.css';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 interface SkillsCardProps {
     skill: Skill;
@@ -10,13 +11,15 @@ interface SkillsCardProps {
 
 export const SkillsCard = ({ skill, index }: SkillsCardProps) => {
     const Icon = skill.icon;
+    const isMobile = useIsMobile();
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            animate={isMobile ? { opacity: 1, y: 0 } : undefined}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+            viewport={isMobile ? undefined : { once: true }}
+            transition={isMobile ? { duration: 0 } : { duration: 0.6, delay: index * 0.1 }}
             className={styles.card}
         >
             <Icon className={styles.icon} />

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'motion/react';
 import styles from './Hero.module.css';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 interface HeroProps {
     year: string;
@@ -11,12 +12,13 @@ interface HeroProps {
 }
 
 export const Hero = ({ year, title, details, tags, shortDescription }: HeroProps) => {
+    const isMobile = useIsMobile();
 
     return <div className={styles.container}>
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={isMobile ? { duration: 0 } : { duration: 0.6 }}
         >
             <div className={styles.content}>
                 <div className={styles.meta}>

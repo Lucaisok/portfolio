@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import styles from './Gallery.module.css';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 interface GalleryProps {
     title: string;
@@ -7,12 +8,14 @@ interface GalleryProps {
 }
 
 export const Gallery = ({ images, title }: GalleryProps) => {
+    const isMobile = useIsMobile();
 
     return <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        initial={isMobile ? false : { opacity: 0, y: 30 }}
+        animate={isMobile ? { opacity: 1, y: 0 } : undefined}
+        whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+        viewport={isMobile ? undefined : { once: true }}
+        transition={isMobile ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
         className={styles.gallery}
     >
         {images.slice(0, 2).map((image, index) => (

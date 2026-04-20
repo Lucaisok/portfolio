@@ -8,6 +8,7 @@ import { Actions } from './Actions';
 import styles from './ProjectCard.module.css';
 import Link from 'next/link';
 import { routes } from '@/src/lib/routes';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 interface ProjectCardProps {
     project: Project;
@@ -15,12 +16,15 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project, index }: ProjectCardProps) => {
+    const isMobile = useIsMobile();
+
     return <motion.div
         key={project.id}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        initial={isMobile ? false : { opacity: 0, y: 50 }}
+        animate={isMobile ? { opacity: 1, y: 0 } : undefined}
+        whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+        viewport={isMobile ? undefined : { once: true }}
+        transition={isMobile ? { duration: 0 } : { duration: 0.8 }}
         className={styles.card}
     >
         <Link className={styles.grid} href={routes.project(project.slug)}>

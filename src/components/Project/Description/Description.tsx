@@ -4,6 +4,7 @@ import { ExternalLink, ArrowUpRight, Code2 } from 'lucide-react';
 import { Gallery } from '../Gallery/Gallery';
 import styles from './Description.module.css';
 import { siteContent } from '@/src/content/global';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 interface DescriptionProps {
     title: string;
@@ -15,14 +16,16 @@ interface DescriptionProps {
 
 export const Description = ({ description, url, codeUrl, title, images }: DescriptionProps) => {
     const content = siteContent.project.description;
+    const isMobile = useIsMobile();
 
     return <div className={styles.container}>
         <div className={styles.grid}>
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                animate={isMobile ? { opacity: 1, y: 0 } : undefined}
+                whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+                viewport={isMobile ? undefined : { once: true }}
+                transition={isMobile ? { duration: 0 } : { duration: 0.6 }}
                 className={styles.content}
             >
                 <div className={styles.meta}>{content.badge}</div>

@@ -5,17 +5,20 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import styles from './ContactSection.module.css';
 import { siteContent } from '@/src/content/global';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 export const ContactSection = () => {
     const content = siteContent.project.contact;
+    const isMobile = useIsMobile();
 
     return <div className={styles.section}>
         <div className={styles.container}>
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                animate={isMobile ? { opacity: 1, y: 0 } : undefined}
+                whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+                viewport={isMobile ? undefined : { once: true }}
+                transition={isMobile ? { duration: 0 } : { duration: 0.6 }}
                 className={styles.content}
             >
                 <h2 className={styles.title}>

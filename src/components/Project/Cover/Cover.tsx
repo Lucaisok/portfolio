@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'motion/react';
 import styles from './Cover.module.css';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 interface CoverProps {
     image: string;
@@ -8,10 +9,12 @@ interface CoverProps {
 }
 
 export const Cover = ({ image, title }: CoverProps) => {
+    const isMobile = useIsMobile();
+
     return <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={isMobile ? false : { opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={isMobile ? { duration: 0 } : { duration: 0.8, delay: 0.2 }}
         className={styles.container}
     >
         <div className={styles.frame}>

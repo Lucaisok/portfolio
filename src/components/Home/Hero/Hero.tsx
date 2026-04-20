@@ -6,9 +6,12 @@ import { Button } from '@/src/components/Button/Button';
 import { siteContent } from '@/src/content/global';
 import { HeroAccentCanvas } from './HeroAccentCanvas';
 import styles from './Hero.module.css';
+import { useIsMobile } from '@/src/hooks/useIsMobile';
 
 export const Hero = () => {
     const content = siteContent.home;
+    const isMobile = useIsMobile();
+
     return (
         <section className={styles.section}>
             <div className={styles.gridBackground} />
@@ -19,18 +22,18 @@ export const Hero = () => {
             <div className={styles.container}>
                 <div className={styles.content}>
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? false : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={isMobile ? { duration: 0 } : { duration: 0.6 }}
                         className={styles.badgeRow}
                     >
                         <Terminal className={styles.badgeIcon} />
                         <span className={styles.badgeText}>{content.fullStackDeveloper}</span>
                     </motion.div>
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? false : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
+                        transition={isMobile ? { duration: 0 } : { duration: 0.6, delay: 0.1 }}
                         className={styles.title}
                     >
                         {content.title}
@@ -38,25 +41,25 @@ export const Hero = () => {
                         <span className={styles.titleMuted}>{content.subTitle}</span>
                     </motion.h1>
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? false : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={isMobile ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
                         className={styles.description}
                     >
                         {content.description}
                     </motion.p>
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? false : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.25 }}
+                        transition={isMobile ? { duration: 0 } : { duration: 0.6, delay: 0.25 }}
                         className={styles.visualMobile}
                     >
                         <HeroAccentCanvas />
                     </motion.div>
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={isMobile ? false : { opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        transition={isMobile ? { duration: 0 } : { duration: 0.6, delay: 0.3 }}
                         className={styles.actions}
                     >
                         <Button href={routes.projects} variant="primary">
