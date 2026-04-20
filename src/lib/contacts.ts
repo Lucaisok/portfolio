@@ -12,7 +12,7 @@ export const contacts = {
     email: "lucatomarelli1@gmail.com",
     linkedin: "https://www.linkedin.com/in/luca-tomarelli-038024132/",
     github: "https://github.com/Lucaisok",
-    cv: "/cv.pdf"
+    cv: "/Luca_Tomarelli_CV_2026.pdf"
 };
 
 export const contactsElements: ContactElement[] = [

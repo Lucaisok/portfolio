@@ -41,7 +41,7 @@ src/
 	types/               # Shared TypeScript types
 public/
 	projects/            # Project images used in cards/detail pages
-	cv.pdf               # Downloadable CV exposed in contact section
+	Luca_Tomarelli_CV_2026.pdf               # Downloadable CV exposed in contact section
 ```
 
 ## Content Management

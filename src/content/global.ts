@@ -4,17 +4,17 @@ export const siteContent = {
     getInTouch: "Get in Touch",
     home: {
         fullStackDeveloper: "Full Stack Developer",
-        title: "Building Digital",
-        subTitle: "Products That Scale",
+        title: "Building Better",
+        subTitle: "Digital Experiences",
         description:
-            "5 years of experience crafting high-performance web and mobile applications. Specialized in React, React Native, and modern JavaScript ecosystems."
+            "5 years of experience crafting high-performance web and mobile applications. Specialized in Next.js, React Native, and modern JavaScript ecosystems."
     },
     about: {
         badge: "// ABOUT",
         title: "Experienced Developer",
         titleMuted: "Focused on Results",
         paragraphFirst:
-            "I'm a full stack developer with a passion for creating efficient, scalable solutions. My expertise spans across modern web and mobile technologies, with a strong emphasis on frontend development and user experience.",
+            "I'm a full stack developer with a passion for creating efficient, scalable solutions. My expertise spans across modern web and mobile technologies, frontend and backend systems.",
         paragraph:
             "Over the past 5 years, I've collaborated with startups and established companies to deliver products that not only meet technical requirements but exceed user expectations."
     },
