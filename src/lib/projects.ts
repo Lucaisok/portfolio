@@ -23,9 +23,9 @@ export const projects: Project[] = [
         shortDescription: `Mobile application that enables users to monitor and manage their home energy system, providing real-time insights into solar production, battery status, and energy consumption.`,
         description: `The Sonnen App is a mobile application designed to give users full visibility and control over their home energy ecosystem, including solar panels, battery storage, and connected devices such as EV chargers.
 
-The app provides real-time and historical data on energy production and consumption, allowing users to better understand and optimize their energy usage. Through an intuitive interface, users can track energy flows, monitor battery levels, and adjust system settings such as backup reserves to ensure reliability during outages.  ￼
+The app provides real-time and historical data on energy production and consumption, allowing users to better understand and optimize their energy usage. Through an intuitive interface, users can track energy flows, monitor battery levels, and adjust system settings such as backup reserves to ensure reliability during outages.
 
-In addition to data visualization, the app integrates with Sonnen’s broader energy platform, enabling access to energy contracts and participation in a distributed energy network. The goal is to empower users to increase energy independence, reduce costs, and actively contribute to a more sustainable energy system.  ￼
+In addition to data visualization, the app integrates with Sonnen’s broader energy platform, enabling access to energy contracts and participation in a distributed energy network. The goal is to empower users to increase energy independence, reduce costs, and actively contribute to a more sustainable energy system.
 
 From a development perspective, the application focuses on performance, usability, and scalability, supporting tens of thousands of active users while integrating with complex backend and IoT systems.`,
         cover: '/projects/sonnen/cover1.jpg',
