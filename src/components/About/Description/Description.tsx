@@ -23,7 +23,7 @@ export const Description = () => {
             <span className={styles.titleMuted}>{content.titleMuted}</span>
         </h2>
         <p className={styles.paragraphFirst}>
-            {content.paragraph}
+            {content.paragraphFirst}
         </p>
         <p className={styles.paragraphFirst}>
             {content.paragraph}
