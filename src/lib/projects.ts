@@ -11,7 +11,7 @@ export interface Project {
     heroImage: string;
     wideImage: string;
     images: string[];
-    url?: string;
+    url: string;
     codeUrl?: string;
 }
 

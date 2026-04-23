@@ -10,13 +10,14 @@ interface DescriptionProps {
     title: string;
     description: string;
     images: string[];
-    url?: string;
+    url: string;
     codeUrl?: string;
 }
 
 export const Description = ({ description, url, codeUrl, title, images }: DescriptionProps) => {
     const content = siteContent.project.description;
     const isMobile = useIsMobile();
+    const hasSourceCode = !!codeUrl;
 
     return <div className={styles.container}>
         <div className={styles.grid}>
@@ -46,7 +47,7 @@ export const Description = ({ description, url, codeUrl, title, images }: Descri
                         <span className={styles.buttonLabel}>{content.liveDemo}</span>
                         <ArrowUpRight className={styles.iconArrow} />
                     </a>
-                    <a
+                    {hasSourceCode && <a
                         href={codeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -55,7 +56,7 @@ export const Description = ({ description, url, codeUrl, title, images }: Descri
                         <Code2 className={styles.iconLarge} />
                         <span className={styles.buttonLabel}>{content.viewCode}</span>
                         <ArrowUpRight className={styles.iconArrow} />
-                    </a>
+                    </a>}
                 </div>
             </motion.div>
             <Gallery title={title} images={images} />
