@@ -34,7 +34,7 @@ export const projects: Project[] = [
         tags: ['Next.js', 'RAG', 'OpenAI API'],
         year: '2026',
         url: 'https://docs-diver.lucadev.org/',
-        cover: '/projects/docs-diver/cover.png',
+        cover: '/projects/docs-diver/docs0.png',
         heroImage: '/projects/docs-diver/docs-hero.png',
         wideImage: '/projects/docs-diver/docs2.png',
         images: ['/projects/docs-diver/docs4.png', '/projects/docs-diver/docs6.png'],
