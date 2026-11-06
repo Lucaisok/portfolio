@@ -1,5 +1,5 @@
 "use client";
-import { Box, Code2, Database, LucideIcon, Smartphone } from "lucide-react";
+import { Box, BrainCircuit, Code2, Database, LucideIcon } from "lucide-react";
 import { SkillsCard } from "./SkillsCard";
 import styles from './SkillsSection.module.css';
 
@@ -11,24 +11,24 @@ export interface Skill {
 
 const skills: Skill[] = [
     {
-        icon: Code2,
-        title: 'Frontend Development',
-        items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS']
+        icon: BrainCircuit,
+        title: 'AI & Machine Learning',
+        items: ['RAG & LLM APIs', 'AI Agents & LangGraph', 'Embeddings & Semantic Search', 'scikit-learn & TensorFlow']
     },
     {
-        icon: Smartphone,
-        title: 'Mobile Development',
-        items: ['React Native', 'iOS', 'Android', 'Cross-platform']
+        icon: Code2,
+        title: 'Frontend & Mobile',
+        items: ['TypeScript', 'React & Next.js', 'React Native', 'iOS & Android']
     },
     {
         icon: Database,
-        title: 'Backend Development',
-        items: ['Node.js', 'Python', 'REST APIs', 'GraphQL']
+        title: 'Backend & Data',
+        items: ['Python & FastAPI', 'Node.js & Express', 'PostgreSQL & pgvector', 'REST & GraphQL']
     },
     {
         icon: Box,
         title: 'DevOps & Tools',
-        items: ['Git', 'Linux', 'Docker', 'CI/CD']
+        items: ['Docker & nginx', 'GitHub Actions', 'Fastlane', 'Linux & Git']
     }
 ];
 

@@ -2,6 +2,8 @@
 import { motion } from 'motion/react';
 import { ExternalLink, ArrowUpRight, Code2 } from 'lucide-react';
 import { Gallery } from '../Gallery/Gallery';
+import { Highlights } from '../Highlights/Highlights';
+import type { Highlight } from '@/src/lib/projects';
 import styles from './Description.module.css';
 import { siteContent } from '@/src/content/global';
 import { useIsMobile } from '@/src/hooks/useIsMobile';
@@ -12,9 +14,10 @@ interface DescriptionProps {
     images: string[];
     url: string;
     codeUrl?: string;
+    highlights?: Highlight[];
 }
 
-export const Description = ({ description, url, codeUrl, title, images }: DescriptionProps) => {
+export const Description = ({ description, url, codeUrl, title, images, highlights }: DescriptionProps) => {
     const content = siteContent.project.description;
     const isMobile = useIsMobile();
     const hasSourceCode = !!codeUrl;
@@ -59,7 +62,9 @@ export const Description = ({ description, url, codeUrl, title, images }: Descri
                     </a>}
                 </div>
             </motion.div>
-            <Gallery title={title} images={images} />
+            {highlights?.length
+                ? <Highlights highlights={highlights} />
+                : <Gallery title={title} images={images} />}
         </div>
     </div>;
 };

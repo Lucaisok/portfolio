@@ -1,0 +1,95 @@
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto 8rem;
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+}
+
+.meta {
+    margin-bottom: 2.5rem;
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1px;
+    background-color: var(--color-border);
+    border: 1px solid var(--color-border);
+}
+
+.step {
+    position: relative;
+    padding: 2rem 1.75rem 2.25rem;
+    background-color: var(--color-surface);
+}
+
+/* the connector between steps: a line with an arrow head, on the step's leading edge */
+.step + .step::before {
+    content: "";
+    position: absolute;
+    top: 2.75rem;
+    left: -0.4rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-top: 1px solid var(--color-accent);
+    border-right: 1px solid var(--color-accent);
+    background-color: var(--color-surface);
+    transform: rotate(45deg);
+}
+
+.marker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 999px;
+}
+
+.number {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.title {
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--foreground);
+}
+
+.detail {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+}
+
+@media (min-width: 1024px) {
+    .steps {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1023px) {
+    /* stacked: the arrow points down from the top edge */
+    .step + .step::before {
+        top: -0.4rem;
+        left: 2.75rem;
+        transform: rotate(135deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        margin-bottom: 5rem;
+    }
+}

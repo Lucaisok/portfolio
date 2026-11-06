@@ -6,7 +6,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
     title: 'About',
     description:
-        'Learn about Luca Tomarelli, full stack developer with 5 years of experience building scalable digital products.',
+        'Learn about Luca Tomarelli, full stack and applied AI engineer with 5 years of experience shipping web, mobile and AI products.',
 };
 
 const About = () => {
