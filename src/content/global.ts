@@ -3,26 +3,26 @@ export const siteContent = {
     viewProjects: "View Projects",
     getInTouch: "Get in Touch",
     home: {
-        fullStackDeveloper: "Full Stack Developer",
-        title: "Building Better",
-        subTitle: "Digital Experiences",
+        fullStackDeveloper: "Full Stack & Applied AI Engineer",
+        title: "Shipping AI Products",
+        subTitle: "End to End",
         description:
-            "5 years of experience crafting high-performance web and mobile applications. Specialized in Next.js, React Native, and modern JavaScript ecosystems."
+            "5 years building production web and mobile apps, now specialising in Applied AI: RAG systems, AI agents and machine learning. TypeScript and React on the front, Python and LLM APIs underneath."
     },
     about: {
         badge: "// ABOUT",
-        title: "Experienced Developer",
-        titleMuted: "Focused on Results",
+        title: "Full Stack Engineer",
+        titleMuted: "Focused on Applied AI",
         paragraphFirst:
-            "I'm a full stack developer with a passion for creating efficient, scalable solutions. My expertise spans across modern web and mobile technologies, frontend and backend systems.",
+            "I'm a full stack developer with 5 years of experience shipping production web and mobile apps, now specialising in Applied AI: retrieval-augmented generation, AI agents and machine learning. I own features end to end, from product and technical decisions to implementation, testing and deployment.",
         paragraph:
-            "Over the past 5 years, I've collaborated with startups and established companies to deliver products that not only meet technical requirements but exceed user expectations."
+            "Over the past 5 years I've worked with startups and established companies, collaborating closely with product managers, designers and backend teams to turn ideas into production-ready features. My core stack is TypeScript, React, React Native, Next.js and Node.js, plus Python, FastAPI, scikit-learn and LLM APIs."
     },
     contact: {
         badge: "// CONTACT",
         title: "Let's Work Together",
         paragraph:
-            "I'm currently available for freelance projects and full-time opportunities. If you have a project in mind or just want to connect, feel free to reach out.",
+            "I'm open to full-time roles in full stack and applied AI engineering, and to freelance projects. If you have a project in mind or just want to connect, feel free to reach out.",
         button: "Send a Message"
     },
     projects: {
@@ -34,7 +34,11 @@ export const siteContent = {
         description: {
             badge: "// ABOUT THE PROJECT",
             liveDemo: "Live Demo",
-            viewCode: "View Code"
+            viewCode: "View Code",
+            highlights: "// HIGHLIGHTS"
+        },
+        pipeline: {
+            badge: "// HOW IT WORKS"
         },
         contact: {
             title: "Like what you see?",

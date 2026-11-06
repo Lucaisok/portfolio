@@ -6,7 +6,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
     title: 'Projects',
     description:
-        "Browse selected projects by Luca Tomarelli, including web platforms and mobile applications.",
+        "Browse selected projects by Luca Tomarelli, including AI applications, web platforms and mobile apps.",
 };
 
 export const Projects = () => {

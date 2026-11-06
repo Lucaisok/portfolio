@@ -11,11 +11,11 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Luca Tomarelli | Full Stack Developer",
+    default: "Luca Tomarelli | Full Stack & Applied AI Engineer",
     template: "%s | Luca Tomarelli",
   },
   description:
-    "Portfolio of Luca Tomarelli, full stack developer building high-performance web and mobile products.",
+    "Portfolio of Luca Tomarelli, full stack and applied AI engineer building production web, mobile and AI products: RAG systems, AI agents and machine learning.",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",

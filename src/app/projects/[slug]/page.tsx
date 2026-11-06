@@ -5,6 +5,7 @@ import { Hero } from '@/src/components/Project/Hero/Hero';
 import { Cover } from '@/src/components/Project/Cover/Cover';
 import { Description } from '@/src/components/Project/Description/Description';
 import { ImageSection } from '@/src/components/Project/ImageSection/ImageSection';
+import { Pipeline } from '@/src/components/Project/Pipeline/Pipeline';
 import { ContactSection } from '@/src/components/Project/ContactSection/ContactSection';
 import styles from './page.module.css';
 
@@ -38,8 +39,10 @@ export const ProjectPage = async ({ params }: ProjectPageProps) => {
     return <div className={styles.page}>
         <Hero year={project.year} tags={project.tags} title={project.title} details={project.details} shortDescription={project.shortDescription} />
         <Cover image={project.heroImage} title={project.title} />
-        <Description description={project.description} url={project.url} codeUrl={project.codeUrl} title={project.title} images={project.images} />
-        <ImageSection image={project.wideImage} title={project.title} />
+        <Description description={project.description} url={project.url} codeUrl={project.codeUrl} title={project.title} images={project.images} highlights={project.highlights} />
+        {project.pipeline?.length
+            ? <Pipeline steps={project.pipeline} />
+            : <ImageSection image={project.wideImage} title={project.title} />}
         <ContactSection />
     </div>;
 };

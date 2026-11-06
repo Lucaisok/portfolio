@@ -1,0 +1,47 @@
+.highlights {
+    min-width: 0;
+}
+
+.meta {
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.list {
+    margin: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.item {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.value {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 300;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+}
+
+.label {
+    margin: 0.625rem 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-muted);
+}
+
+@media (min-width: 1024px) {
+    .highlights {
+        grid-column: 9 / span 4;
+    }
+}
+
+@media (max-width: 767px) {
+    .value {
+        font-size: 1.875rem;
+    }
+}
